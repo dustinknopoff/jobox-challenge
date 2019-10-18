@@ -2,11 +2,7 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
+body {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -19,4 +15,88 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+.App-header {
+  position: fixed;
+  top: 0;
+  right: auto;
+  left: auto;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  /* background-color: #373f51; */
+}
+
+.dog-container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.dog-container > img {
+  padding: 20px;
+  width: 20vw;
+  height: 20vw;
+  border-radius: 5px;
+}
+
+.dog-container > img:hover {
+  border: red;
+}
+
+/* Found select css at https://stackoverflow.com/a/28274325 */
+select {
+  background-color: white;
+  border: none;
+  border-radius: 4px;
+  display: inline-block;
+  font: inherit;
+  /* line-height: 1.5em; */
+  padding: 0.5em 3.5em 0.5em 1em;
+  font-size: 18px;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin-top: 10px;
+}
+
+select.minimal {
+  background-image: linear-gradient(45deg, transparent 50%, gray 50%),
+    linear-gradient(135deg, gray 50%, transparent 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position: calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-repeat: no-repeat;
+}
+
+select.minimal:focus {
+  background-image: linear-gradient(45deg, green 50%, transparent 50%),
+    linear-gradient(135deg, transparent 50%, green 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em,
+    calc(100% - 2.5em) 0.5em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-repeat: no-repeat;
+  border-color: green;
+  outline: 0;
+}
+
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+
+@media only screen and (max-width: 500px) {
+  .dog-container > img {
+    padding: 20px;
+    width: 50vw;
+    height: 50vw;
+    border-radius: 5px;
+  }
 }
